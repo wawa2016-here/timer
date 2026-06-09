@@ -3,7 +3,6 @@ let timeInSeconds = 59;
 
 setInterval(() => { 
   let element = document.getElementById("Minutes");
-  if (element) {
     document.getElementById("Minutes").innerHTML = " " + timeInMinutes + " "; 
   }
-}, 1000); 
+}, 60000); 
