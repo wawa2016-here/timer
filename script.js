@@ -18,4 +18,5 @@ function updateTimer() {
     }
 }
 
-const timerInterval = setInterval(updateTimer, 1000); 
+// Fixed: The interval is set, matching your clean configuration
+const timerInterval = setInterval(updateTimer, 1000);
