@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 Minute Timer</title>
+<style>
+
+h1{
+  color: blue;
+  background-color: brown;
+}
+</style>
+</head>
+<body>
+<div>
+    <h1 id="Minutes">10:00</h1> 
+</div>
+    <script>
+    let totalSeconds = 10 * 60;
+
+function updateTimer() {
+    totalSeconds--;
+
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    document.getElementById("Minutes").innerHTML = minutes + ":" + seconds;
+
+    if (totalSeconds <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById("Minutes").innerHTML = "Time's Up!";
+    }
+}
+
+const timerInterval = setInterval(updateTimer, 1000); 
+    </script>
+</body>
+</html>
